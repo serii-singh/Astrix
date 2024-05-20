@@ -1,0 +1,257 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: white;
+}
+
+.header {
+    /* background-color: #333333; */
+   
+    /* padding: 1rem; */
+    text-align:left;
+    width: 58%;
+    color:gold ;
+    display:flex ;
+    gap:20px;
+    
+}
+
+.container_inner {
+    display: grid;
+    grid-template-columns: 2fr 50px 0.9fr;
+    gap: 1rem ;
+    padding: 1rem;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+
+
+
+
+.sidebar {
+    background-color: #444;
+    /* padding: 1rem; */
+    display: flex;
+    width: 100%;
+    height:100vh;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #1b1a1b;
+    background-color: rgb(193, 129, 214);
+    /* -webkit-text-stroke-color:black; */
+    /* animation: bar 6000ms linear infinite; */
+    font-family: fantasy;
+}
+@keyframes bar{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform:translateY(100%);
+    }
+}
+
+
+
+.sidebar_p{
+    -webkit-text-stroke-color:black;
+    animation: bar 6000ms linear infinite;
+}
+.main-content {
+    /* display: flex; */
+    /* margin-top: 20%; */
+    background-image:url(./bg-img.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    justify-content: space-around;
+    background-color: #121212;
+    padding: 1rem;
+    /* width: 80%; */
+}
+.main-content-card{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-around;
+    /* background-color: #000000; */
+    padding: 1rem;
+    animation: slide 8s ease-in-out infinite;
+
+    /* width: 80%; */
+}
+
+.card:hover{
+    border-radius: 20px;
+    height: 50px;
+    width: 1000px;
+    height: 700px;
+    cursor:pointer;
+
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+.card {
+    /* background-color: #555; */
+    margin: 0.5rem;
+    /* padding: 1rem; */
+    text-align: center;
+    flex: 1;
+}
+
+.card img {
+    width: 100%;
+    height:350px;
+}
+
+.event-details {
+    /* background-color: #444; */
+    padding: 1rem;
+    font-family: system-ui;
+}
+
+.event-details h2,
+.event-details h3 {
+    margin: 0;
+}
+
+.btn-div{
+    margin-top: 60px;
+}
+
+.event-details p {
+    margin: 0.5rem 0;
+}
+
+.event-details span {
+    font-weight: bold;
+}
+
+.artists {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem ;
+    justify-content:center;
+    border-radius: 20px;
+}
+
+.artists:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    
+}
+
+.artists img:hover{
+    border-radius: 20px;
+    height: 50px;
+    width: 140px;
+    height: 140px;
+}
+
+
+.artists img {
+    width: 110px;
+    height: 110px;
+}
+
+.event-details-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.qr-code img {
+    width: 80px;
+    height: 80px;
+    margin: 1rem 0;
+}
+
+.info_card{
+    display: flex;
+    gap: 20px;
+}
+
+.join-waitlist {
+    background-color: #e9d24e;
+    color: rgb(19, 19, 19);
+   align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width:100px;
+    height: 50px;
+    
+}
+
+.artists_lineup{
+    padding: 1rem;
+}
+
+/* .footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+} */
+
+
+.btn{
+   background-color: #2b2a2a;
+   color: white;
+   border-radius: 20px;
+   text-align: center;
+   width: 150px;
+   height: 30px; 
+   row-gap: 0px;
+}
+.btn:hover{
+    background-color: #444;
+    cursor: pointer;
+    font-size: larger;
+    width: 200px;
+    height:50px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container_inner {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content-card {
+        flex-direction: column;
+    }
+    .main-content{
+        background-size: cover;
+    }
+    .sidebar {
+        writing-mode: horizontal-tb;
+    }
+    .artists{
+        flex-direction: column;
+    }
+
+    .footer {
+        position: static;
+    }
+}
+
+@media (max-width:1069px) {
+    .main-content{
+        background-size: cover;
+    }
+}
